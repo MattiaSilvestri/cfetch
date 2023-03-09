@@ -1,8 +1,17 @@
-cfetch: ./src/cfetch.o ./src/modules/model.o
-	g++ -o cfetch ./src/cfetch.o ./src/modules/model.o
+BIN=./bin/
+SRC=./src/
 
-cfetch.o: ./src/cfetch.cpp
-	g++ -c ./src/cfetch.cpp
+$(BIN)cfetch: $(SRC)/cfetch.o $(SRC)/modules/model.o $(SRC)/modules/ram.o
+	g++ -o $(BIN)/cfetch $(SRC)/cfetch.o $(SRC)/modules/model.o $(SRC)/modules/ram.o
 
-./src/model.o:
-	g++ -c ./src/modules/model.cpp
+$(SRC)cfetch.o: $(SRC)/cfetch.cpp
+	g++ -c $(SRC)cfetch.cpp
+
+$(SRC)modules/model.o: $(SRC)/modules/model.cpp $(SRC)/modules/modules.h
+	g++ -c $(SRC)/modules/model.cpp
+
+$(SRC)modules/ram.o: $(SRC)/modules/ram.cpp $(SRC)/modules/modules.h
+	g++ -c $(SRC)/modules/ram.cpp
+
+clean:
+	rm $(SRC)/cfetch.o $(SRC)/modules/model.o $(SRC)/modules/ram.o

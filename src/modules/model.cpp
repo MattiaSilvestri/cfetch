@@ -6,7 +6,6 @@ using namespace std;
 
 string model() {
     string name, version;
-    //
     // Read product_name file
     ifstream model_name("/sys/devices/virtual/dmi/id/product_name");
     getline(model_name, name);
