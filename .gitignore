@@ -1,4 +1,6 @@
 **/.vscode
 *.o
-/build
+build/*
+bin/*
 **/.cache
+makefile
