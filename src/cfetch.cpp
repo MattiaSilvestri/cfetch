@@ -14,4 +14,6 @@ int main() {
     cout << get_os() << endl;
     cout << get_kernel() << endl;
     cout << get_de() << endl;
+    cout << get_pkgs() << endl;
+    cout << get_shell() << endl;
 }

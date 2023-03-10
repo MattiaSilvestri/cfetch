@@ -100,7 +100,9 @@ string get_pkgs() {
     // Snap
     if (filesystem::exists("/bin/snap"))
     {
-        string n_snap = exec("snap list &>/dev/null | wc -l");
+        string cmd = exec("snap list | wc -l");
+        size_t pos = cmd.find("\n");
+        string n_snap = cmd.substr(pos + 1);
         pkg = pkg + n_snap + " (snap) ";
     }
 
@@ -110,8 +112,4 @@ string get_pkgs() {
 
     return pkg;
 
-}
-
-string get_shell() {
-    return getenv("SHELL");
 }
