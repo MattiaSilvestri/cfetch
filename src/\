@@ -30,8 +30,8 @@ int main() {
     string light = exec(("echo -e " + colours_light()).c_str());
 
     array<string, 14> fetch;
-    const int rm {88}; // Characters to remove when computing paddings
-    fetch[0] = "╭─────────────────── System info ───────────────────╮";
+    const int rm {78}; // Characters to remove when computing paddings
+    fetch[0] = "╭───────────────── System info ─────────────────╮";
 
     // Define paddings
     int total_len = fetch[0].length();
@@ -44,23 +44,24 @@ int main() {
     int de_pad = total_len - get_de().length()-rm;
     int pkgs_pad = total_len - get_pkgs().length()-rm;
     int shell_pad = total_len - get_shell().length()-rm;
-    int colour_pad = total_len - dark.length()+13;
+    int dark_pad = total_len - dark.length()-rm;
+    int light_pad = total_len - light.length()-rm;
 
     // Display system info
-    fetch[1] = "│    " + model() + string(model_pad, ' ') + "│";
-    fetch[2] = "│    " + get_ram() + string(ram_pad, ' ') + "│";
-    fetch[3] = "│    " + get_cpu() + string(cpu_pad, ' ') + "│";
-    fetch[4] = "│    " + get_user() + string(user_pad, ' ') + "│";
-    fetch[5] = "│    " + get_os() + string(os_pad, ' ') + "│";
-    fetch[6] = "│    " + get_kernel() + string(kernel_pad, ' ') + "│";
-    fetch[7] = "│    " + get_de() + string(de_pad, ' ') + "│";
-    fetch[8] = "│    " + get_pkgs() + string(pkgs_pad, ' ') + "│";
-    fetch[9] = "│    " + get_shell() + string(shell_pad, ' ') + "│";
+    fetch[1] = "│ " + model() + string(model_pad, ' ') + "│";
+    fetch[2] = "│ " + get_ram() + string(ram_pad, ' ') + "│";
+    fetch[3] = "│ " + get_cpu() + string(cpu_pad, ' ') + "│";
+    fetch[4] = "│ " + get_user() + string(user_pad, ' ') + "│";
+    fetch[5] = "│ " + get_os() + string(os_pad, ' ') + "│";
+    fetch[6] = "│ " + get_kernel() + string(kernel_pad, ' ') + "│";
+    fetch[7] = "│ " + get_de() + string(de_pad, ' ') + "│";
+    fetch[8] = "│ " + get_pkgs() + string(pkgs_pad, ' ') + "│";
+    fetch[9] = "│ " + get_shell() + string(shell_pad, ' ') + "│";
 
-    fetch[10] = "├───────────────────────────────────────────────────┤";
-    fetch[11] = "│ " + dark + string(colour_pad, ' ') + "│";
-    fetch[12] = "│ " + light + string(colour_pad, ' ') + "│";
-    fetch[13] = "╰───────────────────────────────────────────────────╯";
+    fetch[10] = "├───────────────────────────────────────────────┤";
+    fetch[11] = "│ " + dark; //+ string(dark_pad, ' ') + "│";
+    fetch[12] = "│ " + light;//+ string(light_pad, ' ') + "│";
+    fetch[13] = "╰───────────────────────────────────────────────╯";
 
     cout << fetch[0] << endl;
     cout << fetch[1] << endl;
