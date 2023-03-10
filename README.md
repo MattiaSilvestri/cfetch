@@ -15,6 +15,8 @@ The general concept and the structure of the code base was highly inspired by
 Make sure to have these dependences installed:
 - `xrandr`
 - `Material Design Icons Desktop`
+- `cmake`
+- `make`
 
 Then run the following commands:
 
