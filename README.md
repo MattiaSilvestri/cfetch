@@ -27,7 +27,7 @@ cmake ..
 make
 ```
 
-The binary file is automatically generated int the `bin` folder, you can move it
+The binary file is automatically generated in the `bin` folder, you can move it
 in your `PATH` to run it as a regular command.
 
 ## TODO
