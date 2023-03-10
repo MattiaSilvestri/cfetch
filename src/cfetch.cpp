@@ -16,4 +16,10 @@ int main() {
     cout << get_de() << endl;
     cout << get_pkgs() << endl;
     cout << get_shell() << endl;
+    cout << "\n";
+    cout << "--------------------------" << endl;
+    cout << "\n";
+
+    system(("echo -e " + colours_dark()).c_str());
+    system(("echo -e " + colours_light()).c_str());
 }
