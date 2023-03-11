@@ -31,8 +31,9 @@ The binary file is automatically generated in the `bin` folder, you can move it
 in your `PATH` to run it as a regular command.
 
 ## TODO
-- [ ] Add config file
 - [ ] Add more colours
 - [ ] Add host name
+- [ ] Add config file
+- [ ] Add installation script
 
 
