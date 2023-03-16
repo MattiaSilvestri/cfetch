@@ -13,7 +13,7 @@ The general concept and the structure of the code base was highly inspired by
 
 ## Installation
 Make sure to have these dependences installed:
-- `xrandr`
+- `xorg-xrandr`
 - `Material Design Icons Desktop`
 - `cmake`
 - `make`
