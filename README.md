@@ -18,17 +18,13 @@ Make sure to have these dependences installed:
 - `cmake`
 - `make`
 
-Then run the following commands:
+Then make the `setup.sh` file executable and run it as root:
 
 ``` sh
-git clone https://github.com/MattiaSilvestri/cfetch
-cd cfetch/build
-cmake ..
-make
+chmod +x setup.sh
+sudo ./setup.sh
 ```
 
-The binary file is automatically generated in the `bin` folder, you can move it
-in your `PATH` to run it as a regular command.
 
 ## TODO
 - [ ] Add more colours
