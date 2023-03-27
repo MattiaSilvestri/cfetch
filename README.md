@@ -34,6 +34,6 @@ in your `PATH` to run it as a regular command.
 - [ ] Add more colours
 - [ ] Add host name
 - [ ] Add config file
-- [ ] Add installation script
+- [x] Add installation script
 
 
