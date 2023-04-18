@@ -66,7 +66,7 @@ string get_pkgs() {
     string pkg;
 
     // pacman
-    if (std::filesystem::exists("/bin/pacman"))
+    if (filesystem::exists("/bin/pacman"))
         pkg = pkg + exec("pacman -Qq | wc -l") + " (pacman) ";
 
     // dpkg
@@ -100,7 +100,7 @@ string get_pkgs() {
     // Snap
     if (filesystem::exists("/bin/snap"))
     {
-        string n_snap = exec("snap list &>/dev/null | wc -l");
+        string n_snap = exec("snap list | wc -l");
         pkg = pkg + n_snap + " (snap) ";
     }
 

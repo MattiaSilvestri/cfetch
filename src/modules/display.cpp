@@ -10,7 +10,7 @@ string get_res()
 {
     string xrandr;
     array<string, 2> res;
-    xrandr = system("xrandr -q|grep \"connected\"");
+    xrandr = exec("xrandr -q|grep \"connected\"");
 
     int count {};
     size_t pos {}, current_pos {};
