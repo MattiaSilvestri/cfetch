@@ -101,6 +101,7 @@ string get_pkgs() {
     if (filesystem::exists("/bin/snap"))
     {
         string n_snap = exec("snap list | wc -l");
+        n_snap = std::to_string(std::stoi(n_snap) - 1);
         pkg = pkg + n_snap + " (snap) ";
     }
 
