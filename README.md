@@ -13,16 +13,15 @@ The general concept and the structure of the code base was highly inspired by
 
 ## Installation
 Make sure to have these dependences installed:
-- `xorg-xrandr`
-- `Material Design Icons Desktop`
+- `Material Design Icons Desktop` (you can download the .ttf file from [here](https://github.com/Templarian/MaterialDesign-Font))
 - `cmake`
 - `make`
 
-Then make the `setup.sh` file executable and run it as root:
+Then make the `setup.sh` file executable and run it:
 
 ``` sh
 chmod +x setup.sh
-sudo ./setup.sh
+./setup.sh
 ```
 
 
