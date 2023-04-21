@@ -14,5 +14,3 @@ sudo mv ./bin/cfetch $BIN
 
 # Clean installation files
 rm -r build && rm -r bin
-
-printf "Installation succesfull!\n"
