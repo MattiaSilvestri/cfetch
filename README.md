@@ -13,23 +13,32 @@ The general concept and the structure of the code base was highly inspired by
 
 ## Installation
 Make sure to have these dependences installed:
-- `xorg-xrandr`
-- `Material Design Icons Desktop`
+- `Material Design Icons Desktop` (you can download the .ttf file from [here](https://github.com/Templarian/MaterialDesign-Font))
 - `cmake`
 - `make`
 
-Then make the `setup.sh` file executable and run it as root:
+Then make the `setup.sh` file executable and run it:
 
 ``` sh
 chmod +x setup.sh
-sudo ./setup.sh
+./setup.sh
+```
+
+The program requires a compiler that supports C++17 or higher to work properly.
+If you're using GCC, C++17 features are supported from GCC 5. To check the
+version you are currently using, run:
+
+``` sh
+g++ --version
 ```
 
 
 ## TODO
+- [x] Add installation script
 - [ ] Add more colours
 - [ ] Add host name
+- [ ] Add asciiart
+- [ ] Add terminal name
 - [ ] Add config file
-- [x] Add installation script
 
 
