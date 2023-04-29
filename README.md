@@ -35,10 +35,10 @@ g++ --version
 
 ## TODO
 - [x] Add installation script
-- [ ] Add host name
+- [x] Add host name
+- [x] Add terminal name
 - [ ] Add more colours
 - [ ] Add asciiart
-- [ ] Add terminal name
 - [ ] Add config file
 
 
