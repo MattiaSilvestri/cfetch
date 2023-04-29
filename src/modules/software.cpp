@@ -116,3 +116,11 @@ string get_pkgs() {
 string get_shell() {
     return getenv("SHELL");
 }
+
+string get_term() {
+    return getenv("TERM");
+}
+
+string get_host() {
+    return exec("hostname");
+}
