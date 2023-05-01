@@ -38,13 +38,13 @@ int main() {
   fetch.push_back("│    " + get_ram() + string(ram_pad, ' ') + "│");
   fetch.push_back("│    " + get_cpu() + string(cpu_pad, ' ') + "│");
   fetch.push_back("│    " + get_user() + string(user_pad, ' ') + "│");
-  fetch.push_back("│    " + get_host() + string(host_pad, ' ') + "│");
+  fetch.push_back("│    " + get_host() + string(host_pad, ' ') + "│");
   fetch.push_back("│    " + get_os() + string(os_pad, ' ') + "│");
   fetch.push_back("│    " + get_kernel() + string(kernel_pad, ' ') +
                   "│");
   fetch.push_back("│    " + get_de() + string(de_pad, ' ') + "│");
   fetch.push_back("│    " + get_pkgs() + string(pkgs_pad, ' ') + "│");
-  fetch.push_back("│    " + get_shell() + string(shell_pad, ' ') + "│");
+  fetch.push_back("│    " + get_shell() + string(shell_pad, ' ') + "│");
   fetch.push_back("│    " + get_term() + string(term_pad, ' ') + "│");
 
   fetch.push_back("├───────────────────────────────────────────────────┤");

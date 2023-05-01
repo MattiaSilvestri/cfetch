@@ -25,7 +25,7 @@ chmod +x setup.sh
 ```
 
 The program requires a compiler that supports C++17 or higher to work properly.
-If you're using GCC, C++17 features are supported from GCC 5. To check the
+If you're using GCC, C++17 features are supported by default from GCC11. To check the
 version you are currently using, run:
 
 ``` sh
