@@ -1,5 +1,4 @@
 #include "modules.h"
-#include <array>
 #include <cstddef>
 #include <cstdlib>
 #include <fstream>
