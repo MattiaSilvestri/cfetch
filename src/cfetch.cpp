@@ -1,4 +1,6 @@
 #include "modules.h"
+#include "rapidjson/document.h"
+#include "rapidjson/filereadstream.h"
 #include <array>
 #include <cstddef>
 #include <cstdlib>
@@ -8,8 +10,26 @@
 #include <vector>
 
 using namespace std;
+using namespace rapidjson;
 
 int main() {
+
+  // Config folder
+  string conf;
+  const char *xdg_config_home = getenv("XDG_CONFIG_HOME");
+  if (xdg_config_home) {
+    conf = string(xdg_config_home) + "/cfetch/config.json";
+  } else {
+    const char *home = getenv("HOME");
+    if (home) {
+      conf = string(home) + "/.config/cfetch/config.json";
+    } else {
+      // Handle the case where HOME environment variable is not set
+      cerr << "Error: HOME environment variable not set" << endl;
+      return 1;
+    }
+  }
+
   // Get colours
   string dark = exec(("echo " + colours_dark()).c_str());
   string light = exec(("echo " + colours_light()).c_str());
@@ -55,4 +75,23 @@ int main() {
   for (size_t i{}; i < fetch.size(); ++i) {
     cout << fetch[i] << endl;
   }
+
+  // Open the file for reading
+  FILE *fp = fopen(conf.c_str(), "r");
+
+  // Use a FileReadStream to
+  // read the data from the file
+  char readBuffer[65536];
+  rapidjson::FileReadStream is(fp, readBuffer, sizeof(readBuffer));
+
+  // Parse the JSON data
+  // using a Document object
+  rapidjson::Document d;
+  d.ParseStream(is);
+
+  // Close the file
+  fclose(fp);
+
+  // Access the data in the JSON document
+  cout << d["a"].GetString() << std::endl;
 }
