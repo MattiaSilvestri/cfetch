@@ -1,5 +1,5 @@
 # cfetch
-**Simple fetch tool for Linux written in C++**
+**Minimal fetch tool for Linux written in C++**
 
 ![](./resources/showoff.png)
 
