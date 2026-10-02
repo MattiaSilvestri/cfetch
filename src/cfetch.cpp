@@ -10,6 +10,20 @@
 using namespace std;
 
 int main() {
+
+  // Define main Entry struct to hold the data
+  struct Entry {
+    std::string icon;
+    std::string colour;
+    std::string (*get)();
+  };
+
+  // Put the entries in a vector
+  const std::vector<Entry> entries{
+      {"🖥️", "\e[31m", model},
+      {"💻", "\e[32m", get_cpu},
+  };
+
   // Get colours
   string dark = exec(("echo " + colours_dark()).c_str());
   string light = exec(("echo " + colours_light()).c_str());
