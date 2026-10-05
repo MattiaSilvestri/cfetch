@@ -1,0 +1,16 @@
+src/cfetch.cpp
+  h_1ed41898eab8ea 23-28
+src/utils.cpp
+  h_1ed41898eab8ea 1-2,12-32,34-37
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c76d9844eb6a38168bc214032d5fe2cd5de1eacd",
+  "prompts": {},
+  "humans": {
+    "h_1ed41898eab8ea": {
+      "author": "MattiaSilvestri <mattiasilvestri27@gmail.com>"
+    }
+  }
+}
