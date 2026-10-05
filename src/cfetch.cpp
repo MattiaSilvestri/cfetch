@@ -20,8 +20,12 @@ int main() {
 
   // Put the entries in a vector
   const std::vector<Entry> entries{
-      {"🖥️", "\e[31m", model},
-      {"💻", "\e[32m", get_cpu},
+      {" ", "\e[31m", model},      {" ", "\e[32m", get_ram},
+      {" ", "\e[33m", get_cpu},    {" ", "\e[34m", get_user},
+      {" ", "\e[35m", get_host},   {" ", "\e[36m", get_os},
+      {" ", "\e[37m", get_kernel}, {" ", "\e[38m", get_de},
+      {" ", "\e[39m", get_pkgs},   {" ", "\e[40m", get_shell},
+      {" ", "\e[41m", get_term},
   };
 
   // Get colours
